@@ -7,4 +7,5 @@
 
 double get_temperature(int i_sensor);
 double get_humidity(int j_sensor);
+
 #endif //SENSORREADER_H
