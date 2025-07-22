@@ -7,4 +7,6 @@ add_executable(ESP32_IoT_Logger main.c
         inc/Logger.h
         src/Logger.c
         utils/WiFiManager.c
-        utils/SensorReader.c)
+        utils/SensorReader.c
+        utils/SensorReader.h
+)
