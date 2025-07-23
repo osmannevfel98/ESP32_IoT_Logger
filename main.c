@@ -1,16 +1,18 @@
 #include "inc/Logger.h"
 #include "utils/WifiManager.h"
 #include <unistd.h>
+#include <unistd.h>
+#include <stdbool.h>
 
 int main(void) {
-    wifi_connect();
-    //printf("Humidity[3]: %.1f\n", humidity[3]);
-    //printf("Temperature[3]: %.1f\n", temperature[3]);
-    //printf("%.1f\n",get_humidity());
-    //printf("%.1f\n",get_temperature());
+    bool connected = false;
+    wifi_connect(connected);
+    int log_level = 0;
 
     for (int i = 0; i < 10; i++) {
-        log_params(i,i);
+        log_level = get_log_level(i);
+        log_message(log_level);
+        log_params(i);
         sleep(2);
     }
 

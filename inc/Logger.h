@@ -4,7 +4,8 @@
 
 #ifndef LOGGER_H
 #define LOGGER_H
-
-void log_params(int i_sensor, int j_sensor);
-
+enum LogLevel { LOG_INFO, LOG_WARN, LOG_ERROR };
+void log_params(int id);
+void log_message(enum LogLevel level);
+int get_log_level(int id);
 #endif //LOGGER_H
