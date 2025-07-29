@@ -6,8 +6,10 @@ set(CMAKE_C_STANDARD 11)
 add_executable(ESP32_IoT_Logger main.c
         inc/Logger.h
         src/Logger.c
-        utils/WiFiManager.c
-        utils/SensorReader.c
-        utils/SensorReader.h
-        utils/WifiManager.h
+        src/WiFiManager.c
+        src/SensorReader.c
+        inc/SensorReader.h
+        inc/WifiManager.h
+        src/MqttClient.c
+        inc/MqttClient.h
 )
